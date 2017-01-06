@@ -26,6 +26,9 @@ echo "How many transcripts are there on chr2?"
 echo `cut -f2,3 apple.genes | grep "chr2" | uniq -c | wc -l`
 echo "How many transcripts are there on chr3?"
 echo `cut -f2,3 apple.genes | grep "chr3" | uniq -c | wc -l`
+# Note: I had to create sorted versions of the condition files.
+# This can be accomplished with:
+# `cut -f1 filename | sort -u > filename.sorted`
 echo "How many genes are in common between condition A and condition B?"
 echo `comm -1 -2 apple.conditionA.sorted apple.conditionb.sorted | cut -f1 | uniq -c | wc -l`
 echo "How many genes are specific to condition A?"
