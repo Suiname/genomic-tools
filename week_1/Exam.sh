@@ -27,10 +27,10 @@ echo `cut -f2,3 apple.genes | grep "chr2" | uniq -c | wc -l`
 echo "How many transcripts are there on chr3?"
 echo `cut -f2,3 apple.genes | grep "chr3" | uniq -c | wc -l`
 echo "How many genes are in common between condition A and condition B?"
-echo `comm -1 -2 apple.conditionA apple.conditionb | cut -f1 | uniq -c | wc -l`
+echo `comm -1 -2 apple.conditionA.sorted apple.conditionb.sorted | cut -f1 | uniq -c | wc -l`
 echo "How many genes are specific to condition A?"
-echo `comm -2 -3 apple.conditionA apple.conditionb | cut -f1 | uniq -c | wc -l`
+echo `comm -2 -3 apple.conditionA.sorted apple.conditionB.sorted | cut -f1 | uniq -c | wc -l`
 echo "How many genes are specific to condition B?"
-echo `comm -1 -3 apple.conditionA apple.conditionb | cut -f1 | uniq -c | wc -l`
+echo `comm -1 -3 apple.conditionA.sorted apple.conditionB.sorted | cut -f1 | uniq -c | wc -l`
 echo "How many genes are in common to all three conditions?"
-echo `comm -1 -2 apple.conditionA apple.conditionb | comm -1 -2 apple.conditionC - | cut -f1 | uniq -c | wc -l`
+echo `comm -1 -2 apple.conditionA.sorted apple.conditionB.sorted | comm -1 -2 apple.conditionC.sorted - | cut -f1 | uniq -c | wc -l`
