@@ -1,5 +1,6 @@
 #! /bin/bash
-
+# Note: I had to gzip the apple.genome file because git won't accept files over 100meg
+# you can zip the apple.genome file with `gzip apple.genome`
 echo "How many chromosomes are there in the genome?"
 echo `gzcat apple.genome.gz | grep ">" | wc -l`
 echo "How many genes?"
