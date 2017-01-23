@@ -24,3 +24,11 @@ echo "How many cufflinks transcripts are partial reconstructions of reference tr
 echo `cat cuffcmp.transcripts.gtf.tmap | cut -f3 | grep c | wc -l`
 echo "How many cufflinks transcripts are partial reconstructions of reference transcripts (‘contained’)? (Day16)"
 echo `cat cuffcmp.transcripts.gtf.tmap | cut -f3 | grep c | wc -l`
+echo "How many cufflinks transcripts are novel splice variants of reference genes? (Day8)"
+echo `cat cuffcmp.transcripts.gtf.tmap | cut -f3 | grep j | wc -l`
+echo "How many cufflinks transcripts are novel splice variants of reference genes? (Day16)"
+echo `cat cuffcmp.transcripts.gtf.tmap | cut -f3 | grep j | wc -l`
+echo "How many cufflinks transcripts were formed in the introns of reference genes? (Day8)"
+echo `cat cuffcmp.transcripts.gtf.tmap | cut -f3 | grep i | wc -l`
+echo "How many cufflinks transcripts were formed in the introns of reference genes? (Day16)"
+echo `cat cuffcmp.transcripts.gtf.tmap | cut -f3 | grep i | wc -l`
